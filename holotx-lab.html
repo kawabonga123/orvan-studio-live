@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#040506" />
+    <link rel="icon" href="data:," />
+    <title>HOLOTX — prueba de fondos web</title>
+    <link rel="stylesheet" href="./src/holotx-lab.css" />
+  </head>
+  <body>
+    <main class="stage" data-material="0">
+      <video
+        id="background"
+        class="background"
+        src="./holotx/compression.mp4"
+        poster="./holotx/compression.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      ></video>
+      <canvas id="liquid-canvas" class="liquid-canvas" aria-hidden="true"></canvas>
+
+      <div class="veil" aria-hidden="true"></div>
+
+      <header class="masthead">
+        <span>Estudio de materia digital</span>
+        <a href="https://www.instagram.com/holotx/" target="_blank" rel="noreferrer">Visuales originales — HOLOTX</a>
+      </header>
+
+      <section class="hero" aria-live="polite">
+        <p id="eyebrow" class="eyebrow">Material 01 — Compresión</p>
+        <h1 id="headline">La imagen también puede tener pulso.</h1>
+        <p id="description" class="description">Una estructura precisa que se deforma sin perder su naturaleza material.</p>
+        <button id="next" class="primary" type="button">Cambiar material</button>
+      </section>
+
+      <label class="effect-control" for="effect-selector">
+        <span>Interacción</span>
+        <select id="effect-selector">
+          <option value="spirit">Spirit</option>
+          <option value="chroma">Difusión cromática</option>
+          <option value="wave">Onda líquida</option>
+        </select>
+      </label>
+
+      <nav class="materials" aria-label="Elegir fondo audiovisual">
+        <button class="material is-active" type="button" data-index="0" aria-current="true">
+          <span>01</span>
+          <strong>Compresión</strong>
+        </button>
+        <button class="material" type="button" data-index="1">
+          <span>02</span>
+          <strong>Túnel</strong>
+        </button>
+        <button class="material" type="button" data-index="2">
+          <span>03</span>
+          <strong>Estratos</strong>
+        </button>
+      </nav>
+    </main>
+    <script type="module" src="./src/holotx-lab.js"></script>
+  </body>
+</html>
