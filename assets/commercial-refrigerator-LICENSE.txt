@@ -1,0 +1,7 @@
+Asset: CommercialRefrigerator.glb
+Source: Khronos glTF Sample Assets
+Source URL: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CommercialRefrigerator
+License: CC BY 4.0 International
+Credits: Darmstadt Graphics Group GmbH and Sean Thomas (source asset: Commercial Fridge by Sean Thomas)
+Downloaded: 2026-08-15
+SHA-256: EF8DA8B144E650C277AC953E6D9E50AC1689FF1EE88C2C5BD9551AE8BCCB6065

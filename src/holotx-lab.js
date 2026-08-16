@@ -398,9 +398,14 @@ function createPointerEffect() {
 
   function disturbNormalized(x, y, scrollVelocity = 0) {
     const rect = canvas.getBoundingClientRect()
-    const clientX = rect.left + Math.min(1, Math.max(0, x)) * rect.width
-    const clientY = rect.top + Math.min(1, Math.max(0, y)) * rect.height
+    const normalizedX = Math.min(1, Math.max(0, x))
+    const normalizedY = Math.min(1, Math.max(0, y))
+    const clientX = rect.left + normalizedX * rect.width
+    const clientY = rect.top + normalizedY * rect.height
     disturbAt(clientX, clientY, 'orvan')
+    stage.dataset.inputX = normalizedX.toFixed(4)
+    stage.dataset.inputY = normalizedY.toFixed(4)
+    stage.dataset.inputCount = String(Number(stage.dataset.inputCount || 0) + 1)
     pointer.vy += Math.max(-1.4, Math.min(1.4, scrollVelocity / 1100))
     pointer.strength = Math.max(pointer.strength, Math.min(1.65, 0.72 + Math.abs(scrollVelocity) / 1600))
     if (effectMode === 'chroma' && Math.abs(scrollVelocity) > 40) {
